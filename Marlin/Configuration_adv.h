@@ -1911,7 +1911,7 @@
    *  - SDSORT_CACHE_NAMES will retain the sorted file listing in RAM. (Expensive!)
    *  - SDSORT_DYNAMIC_RAM only uses RAM when the SD menu is visible. (Use with caution!)
    */
-  //#define SDCARD_SORT_ALPHA
+  #define SDCARD_SORT_ALPHA
 
   // SD Card Sorting options
   #if ENABLED(SDCARD_SORT_ALPHA)
@@ -2009,9 +2009,9 @@
    * Tested with this bootloader:
    *   https://github.com/FleetProbe/MicroBridge-Arduino-ATMega2560
    */
-  //#define SD_FIRMWARE_UPDATE
+  #define SD_FIRMWARE_UPDATE
   #if ENABLED(SD_FIRMWARE_UPDATE)
-    #define SD_FIRMWARE_UPDATE_EEPROM_ADDR    0x1FF
+    #define SD_FIRMWARE_UPDATE_EEPROM_ADDR    0xFFF
     #define SD_FIRMWARE_UPDATE_ACTIVE_VALUE   0xF0
     #define SD_FIRMWARE_UPDATE_INACTIVE_VALUE 0xFF
   #endif
@@ -2392,7 +2392,7 @@
  *
  * Warning: Does not respect endstops!
  */
-//#define BABYSTEPPING
+#define BABYSTEPPING
 #if ENABLED(BABYSTEPPING)
   //#define EP_BABYSTEPPING                 // M293/M294 babystepping with EMERGENCY_PARSER support
   //#define BABYSTEP_WITHOUT_HOMING
@@ -2439,7 +2439,7 @@
  *
  * See https://marlinfw.org/docs/features/lin_advance.html for full instructions.
  */
-//#define LIN_ADVANCE
+#define LIN_ADVANCE
 
 #if ANY(LIN_ADVANCE, FT_MOTION)
   #if ENABLED(DISTINCT_E_FACTORS)
